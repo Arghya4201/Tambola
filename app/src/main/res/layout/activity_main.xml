@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:id="@+id/rootview">
+
+    <LinearLayout
+        android:id="@+id/lm"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:id="@+id/lm1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:orientation="vertical">
+
+            <TextView
+
+                android:id="@+id/t1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="PLAYER 1"
+                android:textColor="#11ff77"
+                android:textSize="35dp"
+                android:textStyle="bold">
+            </TextView>
+
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_weight="1" />
+
+        <LinearLayout
+            android:id="@+id/lm2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/t2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="PLAYER 2"
+                android:textColor="#0f3ed8"
+                android:textSize="35dp"
+                android:textStyle="bold"></TextView>
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true"
+        android:id="@+id/mainlayout"
+        android:orientation="vertical">
+    </LinearLayout>
+
+    <Button
+        android:gravity="center_horizontal"
+        android:id="@+id/button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/mainlayout"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:onClick="play"
+        android:text="Next Number"></Button>
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:orientation="horizontal"
+            android:layout_below="@id/button"
+            android:id="@+id/lastlayout">
+
+            <TextView
+              android:layout_width="50dp"
+              android:layout_height="wrap_content"
+              android:layout_marginRight="10dp"
+              android:layout_below="@id/button"
+              android:id="@+id/count"
+              android:background="@drawable/layout">
+           </TextView>
+          <TextView
+              android:layout_width="50dp"
+              android:layout_height="wrap_content"
+              android:layout_below="@id/button"
+              android:background="@drawable/layout"
+              android:id="@+id/count1">
+          </TextView>
+        </LinearLayout>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/lastlayout"
+        android:layout_marginTop="30dp"
+        android:textColor="#cc0000"
+        android:id="@+id/lasttext"
+        android:gravity="center"
+        android:layout_centerHorizontal="true"
+        android:textSize="50dp">
+    </TextView>
+</RelativeLayout>
+
+
